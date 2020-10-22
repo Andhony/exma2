@@ -2,5 +2,9 @@
     <string name="app_name">exma2</string>
     <string name="startGame">Iniciar Juego</string>
     <string name="puntajes">Puntajes Altos</string>
-    <string name="configuracion">Configuración</string>
+    <string name="configuracion">CONFIGURACIÓN</string>
+    <string name="hintNick">Ingrese un Nickname</string>
+    <string name="opcDificultad">Dificultad: </string>
+    <string name="guardarConfig">Guardar Configuración</string>
+    <string name="IniciarJuego">Iniciar Juego</string>
 </resources>
