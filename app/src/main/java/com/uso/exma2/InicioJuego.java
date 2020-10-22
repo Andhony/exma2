@@ -82,7 +82,23 @@ public class InicioJuego extends AppCompatActivity {
     }
 
     private int crearAleatorio() {
-        return (int)(Math.random()*5+1);
+        int var = 0;
+        switch(this.lblNivel.getText().toString()){
+            case "Fácil":
+                var= (int)(Math.random()*5+1);
+                break;
+            case "Medio":
+                var= (int)(Math.random()*10+6);
+                break;
+            case "Difícil":
+                var= (int)(Math.random()*15+1);
+                break;
+            default :
+                var =0;
+                break;
+
+        }
+        return var;
     }
 
 
