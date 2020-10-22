@@ -16,4 +16,5 @@
     <string name="contentDescription3">Tercer Lugar</string>
     <string name="sujetoPrueba">John Doe</string>
     <string name="scorePrueba">25</string>
+    <string name="defecto">Aún no existe un Historial de juego.</string>
 </resources>
