@@ -68,9 +68,8 @@ public class InicioJuego extends AppCompatActivity {
             numuser = Integer.parseInt(numero.getText().toString());
 
             if (dificultad.equals("Fácil")){
-                intentosRestantes = 50;
+                intentosRestantes = 0;
                 if (numuser == aleatorio){
-                    Toast.makeText(InicioJuego.this, "Felicidades Ganaste con " + intentos + "intentos", Toast.LENGTH_SHORT).show();
                     mensaje1.setText("Felicitaciones Has Ganado!");
                     mensaje2.setText("Intentos restantes: "+intentos);
                     mensaje3.setText("El numero ganador es: " + aleatorio);
@@ -80,8 +79,35 @@ public class InicioJuego extends AppCompatActivity {
                     Toast.makeText(InicioJuego.this, "Sigue intentandolo", Toast.LENGTH_SHORT).show();
                 }
                     intentosRestantes--;
-                    intentos++;
+                intentos = intentos + 1;
+
             }else if (dificultad.equals("Medio")){
+                intentosRestantes = 0;
+                if (numuser == aleatorio){
+                    mensaje1.setText("Felicitaciones Has Ganado!");
+                    mensaje2.setText("Intentos restantes: "+intentos);
+                    mensaje3.setText("El numero ganador es: " + aleatorio);
+                }else if(numuser < 1 || numuser > 100){
+                    Toast.makeText(InicioJuego.this, "Ingrese un número válido", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(InicioJuego.this, "Sigue intentandolo", Toast.LENGTH_SHORT).show();
+                }
+                intentosRestantes--;
+                intentos = intentos + 1;
+
+            }else if (dificultad.equals("Difícil")){
+                intentosRestantes = 0;
+                if (numuser == aleatorio){
+                    mensaje1.setText("Felicitaciones Has Ganado!");
+                    mensaje2.setText("Intentos restantes: "+intentos);
+                    mensaje3.setText("El numero ganador es: " + aleatorio);
+                }else if(numuser < 1 || numuser > 150){
+                    Toast.makeText(InicioJuego.this, "Ingrese un número válido", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(InicioJuego.this, "Sigue intentandolo", Toast.LENGTH_SHORT).show();
+                }
+                intentosRestantes--;
+                intentos = intentos + 1;
 
             }
 
@@ -128,7 +154,7 @@ public class InicioJuego extends AppCompatActivity {
             default :
                 break;
         }
-        Toast.makeText(this, "El num e:" + var, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "El num es: " + var, Toast.LENGTH_SHORT).show();
         return var;
     }
 
