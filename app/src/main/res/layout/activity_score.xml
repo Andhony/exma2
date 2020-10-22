@@ -22,11 +22,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/IMG1"
         android:layout_width="105dp"
         android:layout_height="98dp"
         android:layout_marginTop="40dp"
         android:contentDescription="@string/contentDescription1"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,159 +35,186 @@
         app:srcCompat="@drawable/first" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/lblNickName1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="@string/lblnickname"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/IMG1"
         app:layout_constraintTop_toBottomOf="@+id/label_BestScores" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/lblPuntaje1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/puntaje"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintStart_toEndOf="@+id/IMG1"
+        app:layout_constraintTop_toBottomOf="@+id/lblNickName1" />
 
     <TextView
-        android:id="@+id/txtTop1Nickname"
+        android:id="@+id/lblTop1Nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
         android:text="@string/sujetoPrueba"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/lblNickName1"
         app:layout_constraintTop_toBottomOf="@+id/label_BestScores" />
 
     <TextView
-        android:id="@+id/txtTop1Score"
+        android:id="@+id/lblTop1Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="@string/scorePrueba"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/txtTop1Nickname" />
+        app:layout_constraintStart_toEndOf="@+id/lblPuntaje1"
+        app:layout_constraintTop_toBottomOf="@+id/lblTop1Nickname" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/IMG2"
         android:layout_width="105dp"
         android:layout_height="98dp"
         android:layout_marginTop="30dp"
         android:contentDescription="@string/contentDescription1"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/IMG1"
         app:srcCompat="@drawable/second" />
 
     <TextView
-        android:id="@+id/txtTop2Nickname"
+        android:id="@+id/lblTop2Nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:text="@string/sujetoPrueba"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.078"
-        app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/txtTop1Score" />
+        app:layout_constraintStart_toEndOf="@+id/lblNickName2"
+        app:layout_constraintTop_toBottomOf="@+id/lblTop1Score" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/lblNickName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:text="@string/lblnickname"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintStart_toEndOf="@+id/IMG2"
+        app:layout_constraintTop_toBottomOf="@+id/lblPuntaje1" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/lblPuntaje2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="@string/puntaje"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintStart_toEndOf="@+id/IMG2"
+        app:layout_constraintTop_toBottomOf="@+id/lblNickName2" />
 
     <TextView
-        android:id="@+id/txtTop2Score"
+        android:id="@+id/lblTop2Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="@string/scorePrueba"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.057"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/txtTop2Nickname" />
+        app:layout_constraintStart_toEndOf="@+id/lblPuntaje2"
+        app:layout_constraintTop_toBottomOf="@+id/lblTop2Nickname" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/IMG3"
         android:layout_width="105dp"
         android:layout_height="98dp"
         android:layout_marginTop="30dp"
         android:contentDescription="@string/contentDescription3"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/IMG2"
         app:srcCompat="@drawable/third" />
 
     <TextView
-        android:id="@+id/txtTop3Nickname"
+        android:id="@+id/lblTop3Nickname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:text="@string/sujetoPrueba"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.061"
-        app:layout_constraintStart_toEndOf="@+id/textView11"
-        app:layout_constraintTop_toBottomOf="@+id/txtTop2Score" />
+        app:layout_constraintStart_toEndOf="@+id/lblNickName3"
+        app:layout_constraintTop_toBottomOf="@+id/lblTop2Score" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/lblNickName3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:text="@string/lblnickname"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toEndOf="@+id/IMG3"
+        app:layout_constraintTop_toBottomOf="@+id/lblPuntaje2" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/lblPuntaje3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/puntaje"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+        app:layout_constraintStart_toEndOf="@+id/IMG3"
+        app:layout_constraintTop_toBottomOf="@+id/lblNickName3" />
 
     <TextView
-        android:id="@+id/txtTop3Score"
+        android:id="@+id/lblTop3Score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="@string/scorePrueba"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/txtTop3Nickname" />
+        app:layout_constraintStart_toEndOf="@+id/lblPuntaje3"
+        app:layout_constraintTop_toBottomOf="@+id/lblTop3Nickname"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/lblDefecto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:text="@string/defecto"
+        android:textColor="#E60505"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
