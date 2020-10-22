@@ -2,4 +2,5 @@
     <string name="app_name">exma2</string>
     <string name="label_BestScores">Mejores Resultados</string>
     <string name="label_Hola">Hola</string>
+    <string name="idButtom">Boton</string>
 </resources>
