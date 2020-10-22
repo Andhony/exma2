@@ -48,6 +48,7 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
+        //Inicializamos las variables de la GUI
         this.lblTop1Nickname = findViewById(R.id.lblTop1Nickname);
         this.lblTop2Nickname = findViewById(R.id.lblTop2Nickname);
         this.lblTop3Nickname = findViewById(R.id.lblTop3Nickname);
@@ -65,6 +66,9 @@ public class ScoreActivity extends AppCompatActivity {
         this.img3 = findViewById(R.id.IMG3);
         this.lblDefecto = findViewById(R.id.lblDefecto);
 
+        //Inicializamos el objeto Historial
+        this.historial = getSharedPreferences(ARCHIVO,MODE_PRIVATE);
+
         //Cargamos datos al historial y cargamos los datos del Shared Preferences
         CargarHistorial();
 
@@ -74,9 +78,6 @@ public class ScoreActivity extends AppCompatActivity {
 
     private void CargarHistorial() {
         if(this.historial != null){
-
-            this.lblDefecto.setVisibility(View.INVISIBLE);
-
             this.lblTop1Nickname.setText(this.historial.getString(KEY_NICKNAME1,""));
             this.lblTop1Score.setText(this.historial.getString(KEY_SCORE1,""));
 
@@ -96,6 +97,7 @@ public class ScoreActivity extends AppCompatActivity {
         }
     }
     private void cargarElementosVisuales(int num){
+        this.lblDefecto.setVisibility(View.INVISIBLE);
         if (num == 3){
             this.lblTop1Score.setVisibility(View.VISIBLE);
             this.lblTop1Nickname.setVisibility(View.VISIBLE);
