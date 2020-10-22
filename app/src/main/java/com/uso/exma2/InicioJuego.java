@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,16 +21,56 @@ public class InicioJuego extends AppCompatActivity {
 
     private TextView lblNickname;
     private TextView lblNivel;
+    private EditText numero;
+    private Button jugar;
+    private int aleatorio;
+    private int intentos = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_juego);
 
+        //Iniciamos variables
         this.lblNickname = findViewById(R.id.lblNickname);
         this.lblNivel = findViewById(R.id.lblNivel);
+        this.numero = findViewById(R.id.txtNumber);
+        this.jugar = findViewById(R.id.btnAceptar);
 
-        this.configuraciones = getSharedPreferences(ARCHIVO,MODE_PRIVATE);
+        //Aqui se va a generar el aleatorio
+        aleatorio = crearAleatorio();
+
+        //presionar botno jugar
+        jugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                    int numuser;
+
+                    numuser = Integer.parseInt(numero.getText().toString());
+                    if (numuser < 0 || numuser > 5) {
+                        Toast.makeText(InicioJuego.this, "Este no es un numero valido", Toast.LENGTH_SHORT).show();
+                    } else if (aleatorio < numuser) {
+                        Toast.makeText(InicioJuego.this, "Ingrese un numero mas bajo", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(InicioJuego.this, "Ingrese un numero mas alto", Toast.LENGTH_SHORT).show();
+                    }
+                        if (aleatorio == numuser) {
+                        jugar.setEnabled(false);
+                        Toast.makeText(InicioJuego.this, "Has ganado!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(InicioJuego.this, "El numero aleatorio es:" + aleatorio, Toast.LENGTH_SHORT).show();
+                    }
+                    intentos = intentos - 1;
+                    Toast.makeText(InicioJuego.this, "Intentos restantes: " + intentos, Toast.LENGTH_SHORT).show();
+                    if (intentos == 0 && aleatorio != numuser){
+                        jugar.setEnabled(false);
+                        Toast.makeText(InicioJuego.this, "Has perdido: ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(InicioJuego.this, "El numero aleatorio es:" + aleatorio, Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
+        this.configuraciones = getSharedPreferences(ARCHIVO, MODE_PRIVATE);
 
         //Validamos que exista una instancia de la configuración
         if(configuraciones != null){
@@ -38,7 +81,9 @@ public class InicioJuego extends AppCompatActivity {
         }
     }
 
-    private void Valida(){
-
+    private int crearAleatorio() {
+        return (int)(Math.random()*5+1);
     }
+
+
 }

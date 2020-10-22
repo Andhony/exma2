@@ -88,7 +88,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/editTextNumber"
+                android:id="@+id/txtNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
