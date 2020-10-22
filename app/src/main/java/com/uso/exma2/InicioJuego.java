@@ -23,7 +23,7 @@ public class InicioJuego extends AppCompatActivity {
     private TextView lblNivel;
     private EditText numero;
     private Button jugar;
-
+    private TextView mensaje1, mensaje2, mensaje3;
     private int aleatorio;
     private int intentos = 0;
     private int intentosRestantes = 0;
@@ -39,6 +39,9 @@ public class InicioJuego extends AppCompatActivity {
         this.lblNivel = findViewById(R.id.lblNivel);
         this.numero = findViewById(R.id.txtNumber);
         this.jugar = findViewById(R.id.btnAceptar);
+        this.mensaje1 = findViewById(R.id.lblMessage1);
+        this.mensaje2 = findViewById(R.id.lblMessage2);
+        this.mensaje3 = findViewById(R.id.lblMessage3);
         this.configuraciones = getSharedPreferences(ARCHIVO, MODE_PRIVATE);
 
         //Validamos que exista una instancia de la configuración
@@ -68,6 +71,8 @@ public class InicioJuego extends AppCompatActivity {
                 intentosRestantes = 50;
                 if (numuser == aleatorio){
                     Toast.makeText(InicioJuego.this, "Felicidades Ganaste con " + intentos + "intentos", Toast.LENGTH_SHORT).show();
+                    mensaje1.setText("Felicitaciones Has Ganado!");
+                    mensaje3.setText("El numero ganador es: " + aleatorio);
                 }else if(numuser < 1 || numuser > 50){
                     Toast.makeText(InicioJuego.this, "Ingrese un número válido", Toast.LENGTH_SHORT).show();
                 }else{
