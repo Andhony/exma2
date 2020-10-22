@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent frmIniciar = new Intent(this, InicioJuego.class);
         startActivity(frmIniciar);
     }
+
+    public void score_onClick(View v){
+        Intent frmScore = new Intent (this, ScoreActivity.class);
+        startActivity(frmScore);
+    }
 }
