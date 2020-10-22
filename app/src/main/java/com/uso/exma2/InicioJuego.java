@@ -72,6 +72,7 @@ public class InicioJuego extends AppCompatActivity {
                 if (numuser == aleatorio){
                     Toast.makeText(InicioJuego.this, "Felicidades Ganaste con " + intentos + "intentos", Toast.LENGTH_SHORT).show();
                     mensaje1.setText("Felicitaciones Has Ganado!");
+                    mensaje2.setText("Intentos restantes: "+intentos);
                     mensaje3.setText("El numero ganador es: " + aleatorio);
                 }else if(numuser < 1 || numuser > 50){
                     Toast.makeText(InicioJuego.this, "Ingrese un número válido", Toast.LENGTH_SHORT).show();
