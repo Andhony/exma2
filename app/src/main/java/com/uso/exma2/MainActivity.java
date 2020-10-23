@@ -19,33 +19,6 @@ public class MainActivity extends AppCompatActivity {
         this.btnJuego = findViewById(R.id.btnjuego);
         this.btnConfig = findViewById(R.id.btnconfiguracion);
         this.btnPuntaje = findViewById(R.id.btnpuntaje);
-
-        this.btnJuego.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent mIntent = new Intent(MainActivity.this,InicioJuego.class);
-                startActivity(mIntent);
-            }
-
-        });
-
-        this.btnPuntaje.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent mIntent = new Intent(MainActivity.this,ScoreActivity.class);
-                startActivity(mIntent);
-            }
-
-        });
-
-        this.btnConfig.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
-                Intent mIntent = new Intent(MainActivity.this,Configuraciones.class);
-                startActivity(mIntent);
-            }
-
-        });
     }
 
     public void configuraciones_onClick(View v){

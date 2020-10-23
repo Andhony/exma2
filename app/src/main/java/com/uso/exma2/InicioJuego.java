@@ -78,7 +78,7 @@ public class InicioJuego extends AppCompatActivity {
                 }else{
                     Toast.makeText(InicioJuego.this, "Sigue intentandolo", Toast.LENGTH_SHORT).show();
                 }
-                    intentosRestantes--;
+                intentosRestantes--;
                 intentos = intentos + 1;
 
             }else if (dificultad.equals("Medio")){

@@ -1,20 +1,20 @@
 <resources>
     <string name="app_name">exma2</string>
-    <string name="startGame">Iniciar Juego</string>
-    <string name="puntajes">Puntajes Altos</string>
-    <string name="configuracion">CONFIGURACIÓN</string>
-    <string name="hintNick">Ingrese un Nickname</string>
-    <string name="opcDificultad">Dificultad: </string>
-    <string name="guardarConfig">Guardar Configuración</string>
-    <string name="IniciarJuego">Iniciar Juego</string>
-    <string name="top3">Mejores puntajes: Top 3</string>
-    <string name="noData">Aún no hay datos que mostrar</string>
-    <string name="lblnickname">Nickname:</string>
-    <string name="puntaje">Puntaje:</string>
-    <string name="contentDescription1">Primer Lugar</string>
-    <string name="contentDescription2">Segundo Lugar</string>
-    <string name="contentDescription3">Tercer Lugar</string>
-    <string name="sujetoPrueba">John Doe</string>
-    <string name="scorePrueba">25</string>
-    <string name="defecto">Aún no existe un Historial de juego.</string>
+        <string name="startGame">Iniciar Juego</string>
+        <string name="puntajes">Puntajes Altos</string>
+        <string name="configuracion">CONFIGURACIÓN</string>
+        <string name="hintNick">Ingrese un Nickname</string>
+        <string name="opcDificultad">Dificultad: </string>
+        <string name="guardarConfig">Guardar Configuración</string>
+        <string name="IniciarJuego">Iniciar Juego</string>
+        <string name="top3">Mejores puntajes: Top 3</string>
+        <string name="noData">Aún no hay datos que mostrar</string>
+        <string name="lblnickname">Nickname:</string>
+        <string name="puntaje">Puntaje:</string>
+        <string name="contentDescription1">Primer Lugar</string>
+        <string name="contentDescription2">Segundo Lugar</string>
+        <string name="contentDescription3">Tercer Lugar</string>
+        <string name="sujetoPrueba">John Doe</string>
+        <string name="scorePrueba">25</string>
+        <string name="defecto">Aún no existe un Historial de juego.</string>
 </resources>
