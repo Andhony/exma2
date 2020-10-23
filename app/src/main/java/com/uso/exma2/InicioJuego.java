@@ -151,59 +151,30 @@ public class InicioJuego extends AppCompatActivity {
                             }
                             intentosRestantes--;
                             intentos = intentos + 1;
-
                         }
-
-
-
-
-
-           /* if (numuser < 0 || numuser > 5 &&  == "Fácil") {
-                Toast.makeText(InicioJuego.this, "Este no es un numero valido", Toast.LENGTH_SHORT).show();
-            } else if (aleatorio < numuser) {
-                Toast.makeText(InicioJuego.this, "Ingrese un numero mas bajo", Toast.LENGTH_SHORT).show();
-            } else {
-                Toast.makeText(InicioJuego.this, "Ingrese un numero mas alto", Toast.LENGTH_SHORT).show();
-            }
-            if (aleatorio == numuser) {
-                jugar.setEnabled(false);
-                Toast.makeText(InicioJuego.this, "Has ganado!", Toast.LENGTH_SHORT).show();
-                Toast.makeText(InicioJuego.this, "El numero aleatorio es:" + aleatorio, Toast.LENGTH_SHORT).show();
-            }
-                intentos = intentos - 1;
-                Toast.makeText(InicioJuego.this, "Intentos restantes: " + intentos, Toast.LENGTH_SHORT).show();
-                if (intentos == 0 && aleatorio != numuser){
-                    jugar.setEnabled(false);
-                    Toast.makeText(InicioJuego.this, "Has perdido: ", Toast.LENGTH_SHORT).show();
-                    Toast.makeText(InicioJuego.this, "El numero aleatorio es:" + aleatorio, Toast.LENGTH_SHORT).show();
-
-                }*/
                     }
                 }
-                ;
+
             }
-
-            private int crearAleatorio() {
-                int var = 0;
-                switch (dificultad) {
-                    case "Fácil":
-                        var = (int) (Math.random() * 50) + 1;
-                        break;
-                    case "Medio":
-                        var = (int) (Math.random() * 100) + 1;
-                        break;
-                    case "Difícil":
-                        var = (int) (Math.random() * 150) + 1;
-                        break;
-                    default:
-                        break;
-                }
-                Toast.makeText(InicioJuego.this, "El num es: " + var, Toast.LENGTH_SHORT).show();
-                return var;
-            }
-
-
         });
 
+    }
+    private int crearAleatorio() {
+        int var = 0;
+        switch (dificultad) {
+            case "Fácil":
+                var = (int) (Math.random() * 50) + 1;
+                break;
+            case "Medio":
+                var = (int) (Math.random() * 100) + 1;
+                break;
+            case "Difícil":
+                var = (int) (Math.random() * 150) + 1;
+                break;
+            default:
+                break;
+        }
+        Toast.makeText(InicioJuego.this, "El num es: " + var, Toast.LENGTH_SHORT).show();
+        return var;
     }
 }
